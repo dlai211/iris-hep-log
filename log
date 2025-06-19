@@ -341,3 +341,48 @@ Detector         WARN  +++ Object 'compact_checksum' is already defined. New val
 16:08:26    Sequencer      INFO        1 readers
 16:08:26    Sequencer      INFO        17 algorithms
 16:08:26    Sequencer      INFO        22 writers
+12:00:57    Sequencer      INFO      finished event 0
+12:01:00    RootParticle   INFO      Wrote particles to tree 'particles' in '/data/jlai/iris-hep/odd_output/particles.root'
+12:01:00    RootVertexWr   INFO      Wrote vertices to tree 'vertices' in '/data/jlai/iris-hep/odd_output/vertices.root'
+12:01:03    RootParticle   INFO      Wrote particles to tree 'particles' in '/data/jlai/iris-hep/odd_output/particles_simulation.root'
+12:01:17    TrackFinderP   INFO      Efficiency with tracks (nMatchedTracks/ nAllTracks) = 0.112894
+12:01:17    TrackFinderP   INFO      Fake ratio with tracks (nFakeTracks/nAllTracks) = 0.106841
+12:01:17    TrackFinderP   INFO      Duplicate ratio with tracks (nDuplicateTracks/nAllTracks) = 0.100014
+12:01:17    TrackFinderP   INFO      Efficiency with particles (nMatchedParticles/nTrueParticles) = 0.991605
+12:01:17    TrackFinderP   INFO      Fake ratio with particles (nFakeParticles/nTrueParticles) = 0.951731
+12:01:17    TrackFinderP   INFO      Duplicate ratio with particles (nDuplicateParticles/nTrueParticles) = 0.950682
+12:01:25    TrackFinderP   INFO      Wrote performance plots to '/data/jlai/iris-hep/odd_output/performance_seeding.root:/'
+12:01:40    RootTrackPar   INFO      Wrote estimated parameters from seed to tree 'estimatedparams' in '/data/jlai/iris-hep/odd_output/estimatedparams.root'
+12:01:40    TrackFinding   INFO      TrackFindingAlgorithm statistics:
+12:01:40    TrackFinding   INFO      - total seeds: 72360
+12:01:40    TrackFinding   INFO      - deduplicated seeds: 7281
+12:01:40    TrackFinding   INFO      - failed seeds: 0
+12:01:40    TrackFinding   INFO      - failed smoothing: 0
+12:01:40    TrackFinding   INFO      - failed extrapolation: 0
+12:01:40    TrackFinding   INFO      - failure ratio seeds: 0
+12:01:40    TrackFinding   INFO      - found tracks: 27970
+12:01:40    TrackFinding   INFO      - selected tracks: 1290
+12:01:40    TrackFinding   INFO      - stopped branches: 51187
+12:01:40    TrackFinding   INFO      - skipped second pass: 8
+12:02:19    RootTrackSum   INFO      Wrote full covariance matrix to tree
+12:02:19    RootTrackSum   INFO      Wrote parameters of tracks to tree 'tracksummary' in '/data/jlai/iris-hep/odd_output/tracksummary_ckf.root'
+12:02:42    TrackFitterP   INFO      Wrote performance plots to '/data/jlai/iris-hep/odd_output/performance_fitting_ckf.root:/'
+12:02:42    TrackFinderP   INFO      Efficiency with tracks (nMatchedTracks/ nAllTracks) = 0.97907
+12:02:42    TrackFinderP   INFO      Fake ratio with tracks (nFakeTracks/nAllTracks) = 0.000775194
+12:02:42    TrackFinderP   INFO      Duplicate ratio with tracks (nDuplicateTracks/nAllTracks) = 0.265116
+12:02:42    TrackFinderP   INFO      Efficiency with particles (nMatchedParticles/nTrueParticles) = 0.966422
+12:02:42    TrackFinderP   INFO      Fake ratio with particles (nFakeParticles/nTrueParticles) = 0.00104932
+12:02:42    TrackFinderP   INFO      Duplicate ratio with particles (nDuplicateParticles/nTrueParticles) = 0.16999
+12:02:52    TrackFinderP   INFO      Wrote performance plots to '/data/jlai/iris-hep/odd_output/performance_finding_ckf.root:/'
+12:03:09    RootTrackSum   INFO      Wrote full covariance matrix to tree
+12:03:09    RootTrackSum   INFO      Wrote parameters of tracks to tree 'tracksummary' in '/data/jlai/iris-hep/odd_output/tracksummary_ambi.root'
+12:03:35    TrackFitterP   INFO      Wrote performance plots to '/data/jlai/iris-hep/odd_output/performance_fitting_ambi.root:/'
+12:03:35    TrackFinderP   INFO      Efficiency with tracks (nMatchedTracks/ nAllTracks) = 0.978746
+12:03:35    TrackFinderP   INFO      Fake ratio with tracks (nFakeTracks/nAllTracks) = 0.0010627
+12:03:35    TrackFinderP   INFO      Duplicate ratio with tracks (nDuplicateTracks/nAllTracks) = 0
+12:03:35    TrackFinderP   INFO      Efficiency with particles (nMatchedParticles/nTrueParticles) = 0.966422
+12:03:35    TrackFinderP   INFO      Fake ratio with particles (nFakeParticles/nTrueParticles) = 0
+12:03:35    TrackFinderP   INFO      Duplicate ratio with particles (nDuplicateParticles/nTrueParticles) = 0
+12:03:44    TrackFinderP   INFO      Wrote performance plots to '/data/jlai/iris-hep/odd_output/performance_finding_ambi.root:/'
+12:03:55    Sequencer      INFO      Processed 1 events in 71728.141689 s (wall clock)
+12:03:55    Sequencer      INFO      Average time per event: 71550.323016 s/event
