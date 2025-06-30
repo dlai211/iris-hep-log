@@ -1,0 +1,13 @@
+#Please note that these values are based on layout configurations which may be out-of-date at the time you run it. They refer to what presented in https://cds.cern.ch/record/2272264. Furthermore, only the barrel layers are included.
+0.02 7.22e-6 2.89e-5 0.028
+0.02 7.22e-6 2.89e-5 0.069
+0.02 7.22e-6 2.89e-5 0.117
+0.02 7.22e-6 2.89e-5 0.156
+
+0.035 2.89e-5 4.17e-4 0.235
+0.035 2.89e-5 4.17e-4 0.366
+0.035 2.89e-5 4.17e-4 0.517
+
+0.035 2.6e-5 0.0145 0.688
+0.035 2.6e-5 0.0145 0.86
+0.035 2.6e-5 0.0145 1.109

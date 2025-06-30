@@ -1,0 +1,12 @@
+#Please note that these values are based on layout configurations which may be out-of-date at the time you run it. They refer to what presented in https://cds.cern.ch/record/2669540. Furthermore, only barrel layers are included.
+#pixel
+0.0174 1.43e-5 1.43e-5 0.039
+0.0174 1.43e-5 1.43e-5 0.099
+0.0174 1.43e-5 1.43e-5 0.16
+0.0174 1.43e-5 1.43e-5 0.228
+0.0174 1.43e-5 1.43e-5 0.291
+#strip
+0.0505 2.19e-5 2.19e-5 0.399
+0.0505 2.19e-5 2.19e-5 0.562
+0.0505 2.19e-5 2.19e-5 0.762
+0.0505 2.19e-5 2.19e-5 1.0
