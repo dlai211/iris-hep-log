@@ -10,7 +10,7 @@ os.makedirs(outdir, exist_ok=True)
 # Loop over keys (directories)
 for key in f.GetListOfKeys():
     dirname = key.GetName()
-    if not dirname.startswith("SurfaceMaterial_vol2"):
+    if not dirname.startswith("SurfaceMaterial_vol"):
         continue
 
     print(f"📁 Entering directory: {dirname}")
