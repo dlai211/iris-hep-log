@@ -61,7 +61,7 @@ const odd_material_images = [
 const imageMap = {
     "odd": {
         images: odd_material_images,
-        path: '/data/jlai/iris-hep-log/TrackingResolution-3.0/TrackingResolution-3.0/material_plots',
+        path: '/data/jlai/iris-hep-log/TrackingResolution-3.0/TrackingResolution-3.0/material_plots/',
         imagesPerRow: 3,
         title: 'ACTS ODD material plots Plots',
         buttons: ['beamline', 'pixel', 'short_strip', 'long_strip']
