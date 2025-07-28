@@ -1,16 +1,31 @@
-# width(x/X0)    resolutionxy(m)    resolutionz(m)    position (m)
+#The Open Data Detector (ODD) is a generic detector concept to perform R&D studies https://zenodo.org/records/6445359 
+#Pixel: 0.015 x 0.015 in mm
+#Short Strips: 0.043 x 1.2 in mm
+#Long Strips: 0.072 in mm with 0.04 rad stereo angle
+#Beampipe X0 = 0.00227
+#Pixel X0 = 0.049
+#Short Strips X0 = 0.059
+#Long Strips X0 = 0.45
+##########################################################
+#width(x/x0) resolutionxy(mm) resolutionz(mm) position (m)
 #beam pipe
 0.00227 9999 9999 0.024
-# pixel
-0.00134   0.015e-3   0.015e-3    0.034
-0.00134   0.015e-3   0.015e-3    0.07
-0.00134   0.015e-3   0.015e-3    0.116
-0.00134   0.015e-3   0.015e-3    0.172
+#pixel 
+#0.01225 0.015e-3 0.015e-3 0.032
+#0.01225 0.015e-3 0.015e-3 0.068
+#0.01225 0.015e-3 0.015e-3 0.113
+#0.01225 0.015e-3 0.015e-3 0.170
+
+0.010   0.015e-3   0.015e-3    0.032
+0.010   0.015e-3   0.015e-3    0.068
+0.010   0.015e-3   0.015e-3    0.113
+0.010   0.015e-3   0.015e-3    0.170
+
 #short strip
-0.00213 0.043e-3 1.2e-3 0.260
-0.00213 0.043e-3 1.2e-3 0.360
-0.00213 0.043e-3 1.2e-3 0.500
-0.00213 0.043e-3 1.2e-3 0.660
+0.01475 0.043e-3 1.2e-3 0.260
+0.01475 0.043e-3 1.2e-3 0.360
+0.01475 0.043e-3 1.2e-3 0.500
+0.01475 0.043e-3 1.2e-3 0.660
 #long strip
 #0.225 0.072 9999 0.840
 #0.225 0.072 9999 1.020
