@@ -18,19 +18,29 @@ for key in f.GetListOfKeys():
     if not isinstance(subdir, ROOT.TDirectoryFile):
         continue
 
+    hists = {}
+
     # Loop over histograms inside each directory
     for subkey in subdir.GetListOfKeys():
         obj = subkey.ReadObj()
         name = obj.GetName().replace(";1", "")
+
+        if name not in ["t", "x0"]:
+            continue
+
         print(f"  📊 Found: {name}")
+        hists[name] = obj.Clone()
+
 
         c = ROOT.TCanvas("c", "", 800, 600)
         obj.SetStats(False)
+        obj.Draw("COLZ")
 
-        if obj.InheritsFrom("TH2"):
-            obj.Draw("COLZ")
-        elif obj.InheritsFrom("TH1"):
-            obj.Draw("HIST")
+
+        # if obj.InheritsFrom("TH2"):
+        #     obj.Draw("COLZ")
+        # elif obj.InheritsFrom("TH1"):
+        #     obj.Draw("HIST")
 
         # Replace slashes and semicolons in names for safe filenames
         safe_name = name.replace("/", "_").replace(";", "")
@@ -39,3 +49,20 @@ for key in f.GetListOfKeys():
 
         c.SaveAs(outfile)
         print(f"  ✅ Saved: {outfile}")
+
+        # Plot t/x0 if both exist
+        if "t" in hists and "x0" in hists:
+            h_t = hists["t"]
+            h_x0 = hists["x0"]
+
+            h_ratio = h_t.Clone("t_over_x0")
+            h_ratio.Divide(h_x0)
+
+            c = ROOT.TCanvas("c", "", 800, 600)
+            h_ratio.SetTitle("t / x0")
+            h_ratio.SetStats(False)
+            h_ratio.Draw("COLZ")
+            safe_dir = dirname.replace("/", "_").replace(";", "")
+            outfile = f"{outdir}/{safe_dir}_t_over_x0.png"
+            c.SaveAs(outfile)
+            print(f"  ✅ Saved: {outfile}")
