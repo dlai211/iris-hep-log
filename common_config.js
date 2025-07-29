@@ -64,6 +64,6 @@ const imageMap = {
         path: 'material_plots/',
         imagesPerRow: 3,
         title: 'ACTS ODD material plots Plots',
-        buttons: ['beamline', 'pixel', 'short_strip', 'long_strip']
+        buttons: ['beam pipe', 'pixel (barrel)', 'short_strip (barrel)', 'long_strip (barrel)']
     },
 };  
