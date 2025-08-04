@@ -35,8 +35,8 @@ for key in f.GetListOfKeys():
 
         c = ROOT.TCanvas("c", "", 800, 600)
         obj.SetStats(False)
-        obj.GetXaxis().SetTitle("φ (deg)")
-        obj.GetYaxis().SetTitle("θ (deg)")
+        obj.GetXaxis().SetTitle("Phi (deg)")
+        obj.GetYaxis().SetTitle("Theta (deg)")
         obj.Draw("COLZ")
 
 
@@ -66,8 +66,8 @@ for key in f.GetListOfKeys():
             c = ROOT.TCanvas("c", "", 800, 600)
             h_ratio.SetTitle("t / x0")
             h_ratio.SetStats(False)
-            h_ratio.GetXaxis().SetTitle("φ (deg)")
-            h_ratio.GetYaxis().SetTitle("θ (deg)")
+            h_ratio.GetXaxis().SetTitle("Phi (deg)")
+            h_ratio.GetYaxis().SetTitle("Theta (deg)")
             h_ratio.Draw("COLZ")
             outfile = f"{outdir}/{safe_dir}_t_over_x0.png"
             c.SaveAs(outfile)
