@@ -35,6 +35,8 @@ for key in f.GetListOfKeys():
 
         c = ROOT.TCanvas("c", "", 800, 600)
         obj.SetStats(False)
+        obj.GetXaxis().SetTitle("φ (deg)")
+        obj.GetYaxis().SetTitle("θ (deg)")
         obj.Draw("COLZ")
 
 
@@ -51,23 +53,6 @@ for key in f.GetListOfKeys():
         c.SaveAs(outfile)
         print(f"  ✅ Saved: {outfile}")
 
-        # Plot t/x0 if both exist
-        # if "t" in hists and "x0" in hists:
-        #     h_t = hists["t"]
-        #     h_x0 = hists["x0"]
-
-        #     h_ratio = h_t.Clone("t_over_x0")
-        #     h_ratio.Divide(h_x0)
-
-        #     c = ROOT.TCanvas("c", "", 800, 600)
-        #     h_ratio.SetTitle("t / x0")
-        #     h_ratio.SetStats(False)
-        #     h_ratio.Draw("COLZ")
-        #     safe_dir = dirname.replace("/", "_").replace(";", "")
-        #     outfile = f"{outdir}/{safe_dir}_t_over_x0.png"
-        #     c.SaveAs(outfile)
-        #     print(f"  ✅ Saved: {outfile}")
-
 
         # Plot t/x0 if both exist
         if "t" in hists and "x0" in hists:
@@ -81,6 +66,8 @@ for key in f.GetListOfKeys():
             c = ROOT.TCanvas("c", "", 800, 600)
             h_ratio.SetTitle("t / x0")
             h_ratio.SetStats(False)
+            h_ratio.GetXaxis().SetTitle("φ (deg)")
+            h_ratio.GetYaxis().SetTitle("θ (deg)")
             h_ratio.Draw("COLZ")
             outfile = f"{outdir}/{safe_dir}_t_over_x0.png"
             c.SaveAs(outfile)
