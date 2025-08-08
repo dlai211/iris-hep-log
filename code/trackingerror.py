@@ -247,7 +247,7 @@ def inputfromfile(filename,verbose):
     if count==0:
         print("Error: The input file is not supported or empty, please check that the file is in required format.")
         return None
-    print("Successfully read %d layers" %count)
+    # print("Successfully read %d layers" %count)
     return userdetector
 
 def addparser():
