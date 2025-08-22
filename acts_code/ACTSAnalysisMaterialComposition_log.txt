@@ -1,0 +1,27 @@
+*** Material Composition plotting 
+Reading region configuration from JSON: "/data/jlai/iris-hep/acts/thirdparty/OpenDataDetector/ci/composition_config.json"
+Region(beampipe)
+* beampipe r/z: 0/24.4 -4000/4000
+Region(pixel)
+* pixel r/z: 25/200 -2400/2400
+Region(sstrips)
+* sstrips r/z: 202/720 -3150/3150
+Region(lstrips)
+* lstrips r/z: 720/1140 -3150/3150
+Region(solenoid)
+* solenoid r/z: 1160/1200 -3000/3000
+Region(ecalbarrel)
+* ecalbarrel r/z: 1250/1500 -3050/3050
+Region(ecalendcap)
+* ecalendcap r/z: 315/1500 3200/3450
+* ecalendcap r/z: 315/1540 -3450/-3200
+Region(hcalbarrel)
+* hcalbarrel r/z: 1600/3436 -3450/3450
+Region(hcalendcap)
+* hcalendcap r/z: 355/3436 3600/5436
+* hcalendcap r/z: 355/3436 -5436/-3600
+*** Event Loop: 
+
+0%   10   20   30   40   50   60   70   80   90   100%
+|----|----|----|----|----|----|----|----|----|----|
+***************************************************
