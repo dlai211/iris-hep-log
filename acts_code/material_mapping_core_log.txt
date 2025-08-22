@@ -1,0 +1,154 @@
+DD4hep           WARN  ++ STD conditions NOT defined by client. NTP defaults taken.
+Detector         WARN  +++ Object 'compact_checksum' is already defined. New value will be ignored
+12:23:27    DD4hepConver   INFO      Translating DD4hep geometry into Acts geometry
+12:23:27    DD4hepConver   INFO      Translating DD4hep sub detector: BeamPipe
+12:23:27    DD4hepConver   INFO      Translating DD4hep sub detector: Pixels
+12:23:27    DD4hepConver   INFO      Translating DD4hep sub detector: PST
+12:23:27    DD4hepConver   INFO      Translating DD4hep sub detector: ShortStrips
+12:23:27    DD4hepConver   INFO      Translating DD4hep sub detector: LongStrips
+12:23:27    DD4hepConver   INFO      Translating DD4hep sub detector: Solenoid
+12:23:27    DD4hepConver   INFO      Translating DD4hep sub detector: ECal
+12:23:27    DD4hepConver   INFO      Translating DD4hep sub detector: HCal
+12:23:27    D2A_V:ECal     INFO      No layers present, returning nullptr
+12:23:27    TrackingGeom   INFO      Received nullptr volume from builder, keeping previous highest volume
+12:23:27    D2A_V:HCal     INFO      No layers present, returning nullptr
+12:23:27    TrackingGeom   INFO      Received nullptr volume from builder, keeping previous highest volume
+12:25:45    Sequencer      INFO      Create Sequencer (single-threaded)
+12:25:46    Sequencer      INFO      Add Reader 'RootMaterialTrackReader'
+12:25:46    Sequencer      INFO      -> OutputMaterialTracks 'material-tracks':
+12:25:46    Sequencer      INFO            unordered_map<unsigned long, pair<pair<Eigen::Matrix<double, 3, 1, 0, 3, 1>, Eig   en::Matrix<double, 3, 1, 0, 3, 1> >, RecordedMaterial>, hash<unsigned long>, equ   al_to<unsigned long>, allocator<pair<unsigned long const, pair<pair<Eigen::Matri   x<double, 3, 1, 0, 3, 1>, Eigen::Matrix<double, 3, 1, 0, 3, 1> >, RecordedMaterial> > > >
+12:25:47    CoreMaterial   INFO      This algorithm requires inter-event information, run in single-threaded mode!
+12:25:47    Sequencer      INFO      Add Algorithm 'CoreMaterialMapping'
+12:25:47    Sequencer      INFO      <- InputMaterialTracks 'material-tracks':
+12:25:47    Sequencer      INFO            unordered_map<unsigned long, pair<pair<Eigen::Matrix<double, 3, 1, 0, 3, 1>, Eig   en::Matrix<double, 3, 1, 0, 3, 1> >, RecordedMaterial>, hash<unsigned long>, equ   al_to<unsigned long>, allocator<pair<unsigned long const, pair<pair<Eigen::Matri   x<double, 3, 1, 0, 3, 1>, Eigen::Matrix<double, 3, 1, 0, 3, 1> >, RecordedMaterial> > > >
+12:25:47    Sequencer      INFO      -> OutputMappedMaterialTracks 'mapped-material-tracks':
+12:25:47    Sequencer      INFO            unordered_map<unsigned long, pair<pair<Eigen::Matrix<double, 3, 1, 0, 3, 1>, Eig   en::Matrix<double, 3, 1, 0, 3, 1> >, RecordedMaterial>, hash<unsigned long>, equ   al_to<unsigned long>, allocator<pair<unsigned long const, pair<pair<Eigen::Matri   x<double, 3, 1, 0, 3, 1>, Eigen::Matrix<double, 3, 1, 0, 3, 1> >, RecordedMaterial> > > >
+12:25:47    Sequencer      INFO      -> OutputUnmappedMaterialTracks 'unmapped-material-tracks':
+12:25:47    Sequencer      INFO            unordered_map<unsigned long, pair<pair<Eigen::Matrix<double, 3, 1, 0, 3, 1>, Eig   en::Matrix<double, 3, 1, 0, 3, 1> >, RecordedMaterial>, hash<unsigned long>, equ   al_to<unsigned long>, allocator<pair<unsigned long const, pair<pair<Eigen::Matri   x<double, 3, 1, 0, 3, 1>, Eigen::Matrix<double, 3, 1, 0, 3, 1> >, RecordedMaterial> > > >
+12:25:47    Sequencer      INFO      Add Writer 'RootMaterialTrackWriter'
+12:25:47    Sequencer      INFO      <- InputHandle 'mapped-material-tracks':
+12:25:47    Sequencer      INFO            unordered_map<unsigned long, pair<pair<Eigen::Matrix<double, 3, 1, 0, 3, 1>, Eig   en::Matrix<double, 3, 1, 0, 3, 1> >, RecordedMaterial>, hash<unsigned long>, equ   al_to<unsigned long>, allocator<pair<unsigned long const, pair<pair<Eigen::Matri   x<double, 3, 1, 0, 3, 1>, Eigen::Matrix<double, 3, 1, 0, 3, 1> >, RecordedMaterial> > > >
+12:25:48    Sequencer      INFO      Add Writer 'RootMaterialTrackWriter'
+12:25:48    Sequencer      INFO      <- InputHandle 'unmapped-material-tracks':
+12:25:48    Sequencer      INFO            unordered_map<unsigned long, pair<pair<Eigen::Matrix<double, 3, 1, 0, 3, 1>, Eig   en::Matrix<double, 3, 1, 0, 3, 1> >, RecordedMaterial>, hash<unsigned long>, equ   al_to<unsigned long>, allocator<pair<unsigned long const, pair<pair<Eigen::Matri   x<double, 3, 1, 0, 3, 1>, Eigen::Matrix<double, 3, 1, 0, 3, 1> >, RecordedMaterial> > > >
+12:25:48    Sequencer      INFO      Processing events [0, 10000)
+12:25:48    Sequencer      INFO      Starting event loop with 1 threads
+12:25:48    Sequencer      INFO        0 context decorators
+12:25:48    Sequencer      INFO        4 sequence elements
+12:25:48    Sequencer      INFO        1 readers
+12:25:48    Sequencer      INFO        1 algorithms
+12:25:48    Sequencer      INFO        2 writers
+12:25:48    Sequencer      INFO      100 / 10000 events processed
+12:25:48    Sequencer      INFO      200 / 10000 events processed
+12:25:48    Sequencer      INFO      300 / 10000 events processed
+12:25:48    Sequencer      INFO      400 / 10000 events processed
+12:25:48    Sequencer      INFO      500 / 10000 events processed
+12:25:48    Sequencer      INFO      600 / 10000 events processed
+12:25:48    Sequencer      INFO      700 / 10000 events processed
+12:25:49    Sequencer      INFO      800 / 10000 events processed
+12:25:49    Sequencer      INFO      900 / 10000 events processed
+12:25:49    Sequencer      INFO      1000 / 10000 events processed
+12:25:49    Sequencer      INFO      1100 / 10000 events processed
+12:25:49    Sequencer      INFO      1200 / 10000 events processed
+12:25:49    Sequencer      INFO      1300 / 10000 events processed
+12:25:49    Sequencer      INFO      1400 / 10000 events processed
+12:25:49    Sequencer      INFO      1500 / 10000 events processed
+12:25:49    Sequencer      INFO      1600 / 10000 events processed
+12:25:49    Sequencer      INFO      1700 / 10000 events processed
+12:25:49    Sequencer      INFO      1800 / 10000 events processed
+12:25:49    Sequencer      INFO      1900 / 10000 events processed
+12:25:49    Sequencer      INFO      2000 / 10000 events processed
+12:25:49    Sequencer      INFO      2100 / 10000 events processed
+12:25:50    Sequencer      INFO      2200 / 10000 events processed
+12:25:50    Sequencer      INFO      2300 / 10000 events processed
+12:25:50    Sequencer      INFO      2400 / 10000 events processed
+12:25:50    Sequencer      INFO      2500 / 10000 events processed
+12:25:50    Sequencer      INFO      2600 / 10000 events processed
+12:25:50    Sequencer      INFO      2700 / 10000 events processed
+12:25:50    Sequencer      INFO      2800 / 10000 events processed
+12:25:50    Sequencer      INFO      2900 / 10000 events processed
+12:25:50    Sequencer      INFO      3000 / 10000 events processed
+12:25:50    Sequencer      INFO      3100 / 10000 events processed
+12:25:50    Sequencer      INFO      3200 / 10000 events processed
+12:25:50    Sequencer      INFO      3300 / 10000 events processed
+12:25:51    Sequencer      INFO      3400 / 10000 events processed
+12:25:51    Sequencer      INFO      3500 / 10000 events processed
+12:25:51    Sequencer      INFO      3600 / 10000 events processed
+12:25:51    Sequencer      INFO      3700 / 10000 events processed
+12:25:51    Sequencer      INFO      3800 / 10000 events processed
+12:25:51    Sequencer      INFO      3900 / 10000 events processed
+12:25:51    Sequencer      INFO      4000 / 10000 events processed
+12:25:51    Sequencer      INFO      4100 / 10000 events processed
+12:25:51    Sequencer      INFO      4200 / 10000 events processed
+12:25:51    Sequencer      INFO      4300 / 10000 events processed
+12:25:51    Sequencer      INFO      4400 / 10000 events processed
+12:25:51    Sequencer      INFO      4500 / 10000 events processed
+12:25:51    Sequencer      INFO      4600 / 10000 events processed
+12:25:51    Sequencer      INFO      4700 / 10000 events processed
+12:25:51    Sequencer      INFO      4800 / 10000 events processed
+12:25:51    Sequencer      INFO      4900 / 10000 events processed
+12:25:51    Sequencer      INFO      5000 / 10000 events processed
+12:25:51    Sequencer      INFO      5100 / 10000 events processed
+12:25:52    Sequencer      INFO      5200 / 10000 events processed
+12:25:52    Sequencer      INFO      5300 / 10000 events processed
+12:25:52    Sequencer      INFO      5400 / 10000 events processed
+12:25:52    Sequencer      INFO      5500 / 10000 events processed
+12:25:52    Sequencer      INFO      5600 / 10000 events processed
+12:25:52    Sequencer      INFO      5700 / 10000 events processed
+12:25:52    Sequencer      INFO      5800 / 10000 events processed
+12:25:52    Sequencer      INFO      5900 / 10000 events processed
+12:25:52    Sequencer      INFO      6000 / 10000 events processed
+12:25:52    Sequencer      INFO      6100 / 10000 events processed
+12:25:52    Sequencer      INFO      6200 / 10000 events processed
+12:25:52    Sequencer      INFO      6300 / 10000 events processed
+12:25:53    Sequencer      INFO      6400 / 10000 events processed
+12:25:53    Sequencer      INFO      6500 / 10000 events processed
+12:25:53    Sequencer      INFO      6600 / 10000 events processed
+12:25:53    Sequencer      INFO      6700 / 10000 events processed
+12:25:53    Sequencer      INFO      6800 / 10000 events processed
+12:25:53    Sequencer      INFO      6900 / 10000 events processed
+12:25:53    Sequencer      INFO      7000 / 10000 events processed
+12:25:53    Sequencer      INFO      7100 / 10000 events processed
+12:25:53    Sequencer      INFO      7200 / 10000 events processed
+12:25:53    Sequencer      INFO      7300 / 10000 events processed
+12:25:53    Sequencer      INFO      7400 / 10000 events processed
+12:25:53    Sequencer      INFO      7500 / 10000 events processed
+12:25:53    Sequencer      INFO      7600 / 10000 events processed
+12:25:54    Sequencer      INFO      7700 / 10000 events processed
+12:25:54    Sequencer      INFO      7800 / 10000 events processed
+12:25:55    Sequencer      INFO      7900 / 10000 events processed
+12:25:55    Sequencer      INFO      8000 / 10000 events processed
+12:25:55    Sequencer      INFO      8100 / 10000 events processed
+12:25:55    Sequencer      INFO      8200 / 10000 events processed
+12:25:55    Sequencer      INFO      8300 / 10000 events processed
+12:25:55    Sequencer      INFO      8400 / 10000 events processed
+12:25:55    Sequencer      INFO      8500 / 10000 events processed
+12:25:55    Sequencer      INFO      8600 / 10000 events processed
+12:25:55    Sequencer      INFO      8700 / 10000 events processed
+12:25:55    Sequencer      INFO      8800 / 10000 events processed
+12:25:55    Sequencer      INFO      8900 / 10000 events processed
+12:25:55    Sequencer      INFO      9000 / 10000 events processed
+12:25:55    Sequencer      INFO      9100 / 10000 events processed
+12:25:55    Sequencer      INFO      9200 / 10000 events processed
+12:25:55    Sequencer      INFO      9300 / 10000 events processed
+12:25:55    Sequencer      INFO      9400 / 10000 events processed
+12:25:55    Sequencer      INFO      9500 / 10000 events processed
+12:25:55    Sequencer      INFO      9600 / 10000 events processed
+12:25:55    Sequencer      INFO      9700 / 10000 events processed
+12:25:55    Sequencer      INFO      9800 / 10000 events processed
+12:25:55    Sequencer      INFO      9900 / 10000 events processed
+12:25:55    Sequencer      INFO      10000 / 10000 events processed
+12:25:55    RootMaterial   INFO      Writing ROOT output File : core_mapped.root
+12:25:56    RootMaterial   INFO      Writing ROOT output File : core_unmapped.root
+12:25:57    Sequencer      INFO      No unmasked FPEs encountered
+12:25:57    Sequencer      INFO      Processed 10000 events in 8.845526 s (wall clock)
+12:25:57    Sequencer      INFO      Average time per event: 740.504000 us/event
+Creating the sequencer with 1 thread (inter event information needed)
+FPE masks:
+- Fatras/include/ActsFatras/Kernel/detail/SimulationActor.hpp:172: FLTUND: 1
+- Fatras/include/ActsFatras/Physics/ElectroMagnetic/BetheHeitler.hpp:63: FLTUND: 1
+- Core/src/Vertexing/AdaptiveMultiVertexFinder.cpp:474: FLTUND: 1
+- Core/include/Acts/TrackFitting/detail/GsfComponentMerging.hpp:88: FLTUND: 1
+- Core/include/Acts/TrackFitting/detail/GsfComponentMerging.hpp:198: FLTUND: 1
+- Core/include/Acts/Visualization/Interpolation3D.hpp:63: FLTDIV: 1
+- Core/include/Acts/Visualization/Interpolation3D.hpp:64: FLTINV: 1
