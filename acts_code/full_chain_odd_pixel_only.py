@@ -228,7 +228,7 @@ else:
                 transverse=True,
             ),
             EtaConfig(args.gun_eta_range[0], args.gun_eta_range[1]),
-            PhiConfig(0.0, 360.0 * u.degree),
+            # PhiConfig(0.0, 360.0 * u.degree),
             ParticleConfig(
                 args.gun_particles, acts.PdgParticle.eMuon, randomizeCharge=True
             ),
@@ -377,13 +377,13 @@ if args.reco:
             maxPixelHoles=1,
             maxStripHoles=0,
             constrainToVolumes=[
-                2,  # beam pipe
-                32,
-                4,  # beam pip gap
+                # 2,  # beam pipe
+                # 32,
+                # 4,  # beam pip gap
                 16,
                 17,
                 18,  # pixel
-                20,  # PST
+                # 20,  # PST
                 # 23,
                 # 24,
                 # 25,  # short strip
