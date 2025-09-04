@@ -41,7 +41,8 @@ plt.rcParams.update({
 
 # ========= Saving ACTS results =========
 print("Loading ACTS results...")
-path = '/data/jlai/iris-hep/OutputPT_pixel_only/'
+# path = '/data/jlai/iris-hep/OutputPT_pixel_nointer/'   # pixel only (no interaction)
+path = '/data/jlai/iris-hep/OutputPT_pixel_only/'  # pixel only (with interaction)
 var_labels = ['sigma(d)', 'sigma(z)', 'sigma(phi)', 'sigma(theta)', 'sigma(pt)/pt']
 
 y_acts = {label: [] for label in var_labels}
@@ -92,6 +93,7 @@ for pT_value in pT_values:
 
 # ========= Iteration =========
 VAR_LABELS = ['sigma(d)', 'sigma(z)', 'sigma(phi)', 'sigma(theta)']
+# VAR_LABELS = ['sigma(d)', 'sigma(z)', 'sigma(phi)', 'sigma(theta)', 'sigma(pt)/pt']
 
 # ========= Toggle constraints / which variables are optimized =========
 WIDTHS_TIED   = True   # True => w1=w2=w3=w4, False => all four can differ
@@ -107,21 +109,25 @@ beam_pipe = (0.00227, 9999.0, 9999.0, 0.024)  # width, resxy, resz, pos (m)
 pixel_positions_base = np.array([0.032779, 0.069890, 0.111088, 0.166687], dtype=float)
 
 pixel_base_width = 0.01225
+# pixel_base_width = 0.0
 widths_base = np.array([pixel_base_width]*4, dtype=float)  # per-layer widths
-resxy_base = 1.341284e-05
-resz_base  = 1.341284e-05
+# resxy_base = 1.341284e-05
+# resz_base  = 1.341284e-05
+resxy_base = 1.44e-05
+resz_base  = 1.44e-05
 
 pos_off_base = np.zeros(4, dtype=float)  # per-layer position offsets (m), frozen by default
 
 # ========= Bounds & steps =========
 WIDTH_MIN, WIDTH_MAX = 0.0, 0.05
-RES_MIN, RES_MAX = resxy_base - 0.01e-3, resxy_base + 0.01e-3  # >= 50 nm guard
-POS_MIN, POS_MAX = -0.005, 0.005
+# RES_MIN, RES_MAX = resxy_base - 0.01e-3, resxy_base + 0.01e-3  # >= 50 nm guard
+RES_MIN, RES_MAX = resxy_base - 0.15e-3, resxy_base + 0.15e-3  # >= 50 nm guard
+POS_MIN, POS_MAX = -0.01, 0.01
 
 # Initial step sizes (used only for variables with OPTIMIZE_* = True)
-w_step_init  = 5e-4
-r_step_init  = 5e-7
-p_step_init  = 5e-4
+w_step_init  = 1e-4
+r_step_init  = 1e-7
+p_step_init  = 1e-4
 
 # Stop when steps fall below:
 w_eps, r_eps, p_eps = 5e-5, 1e-8, 8e-6
@@ -174,7 +180,7 @@ def cal(inputfile):
     y_calc = {label: [] for label in VAR_LABELS}
     for pT in pT_values:
         p, eta = float(pT), 0.0
-        B, m = 2.0, 0.106
+        B, m = 2.6, 0.106
         det = inputfromfile(inputfile, 0)
         out = det.errorcalculation(p, B, eta, m)
         for lbl in VAR_LABELS:
@@ -534,7 +540,7 @@ def cal(inputfile='ODD.txt'):
     for pT_value in pT_values:
         pT_value = int(pT_value)
         p, eta = pT_value, 0
-        B, m = 2, 0.106
+        B, m = 2.6, 0.105658
         mydetector = inputfromfile(inputfile, 0)
         calc_result = mydetector.errorcalculation(p, B, eta, m)
 
@@ -544,7 +550,7 @@ def cal(inputfile='ODD.txt'):
 
 path = '/data/jlai/iris-hep-log/TrackingResolution-3.0/TrackingResolution-3.0/'
 y_calc = cal(path+'ODD.txt')
-y_calc3 = cal(path+'myODD_best.txt')
+y_calc3 = cal(path+'myODD_test.txt')
 
 # ========= Plotting =========
 plt.figure(figsize=(20, 10))
