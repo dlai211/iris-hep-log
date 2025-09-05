@@ -1,0 +1,7 @@
+param,res_convention,mean(res),std(res),mean(pull),std(pull),mean_abs_diff_vs_stored_res,mean_abs_diff_vs_stored_pull,have_err,have_stored_res,have_stored_pull
+loc0,(reco - truth),-5.8896152e-05,0.014867035,-5.8896152e-05,0.014867035,0.0,0.0,True,True,True
+loc1,(reco - truth),-1.3134045e-05,0.015221139,-1.3134045e-05,0.015221139,0.0,0.0,True,True,True
+phi,(reco - truth),0.00014817393,0.04122248,0.008489742,2.361874,0.00027044944,0.015495611,True,True,True
+theta,(reco - truth),2.8107755e-07,0.00032387621,1.6104557e-05,0.01855674,0.0,0.0,True,True,True
+qop,(reco - truth),6.2983636e-05,0.023879828,0.0006246538,0.23731215,0.0,0.0,True,True,True
+time,(reco - truth),0.110988155,24.832134,0.00037021658,0.082831085,0.0,0.0,True,True,True
