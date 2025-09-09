@@ -665,7 +665,7 @@ with open(BEST_JSON, "w") as f:
 write_final_txt(BEST_TXT, realized_positions(best["params"]))
 
 print("\n=== BEST ({}) ===".format(OBJECTIVE))
-print(json.dumps(best, indent=2))
+print(json.dumps(payload["best"], indent=2)) 
 print(f"\nLog CSV:   {LOG_CSV}")
 print(f"Best JSON: {BEST_JSON}")
 print(f"Best TXT:  {BEST_TXT}")
