@@ -133,8 +133,8 @@ RootTrackSummaryWriter::RootTrackSummaryWriter(
   m_outputTree->Branch("res_eTHETA_fit", &m_res_eTHETA_fit);
   m_outputTree->Branch("res_eQOP_fit", &m_res_eQOP_fit);
   m_outputTree->Branch("res_eT_fit", &m_res_eT_fit);
-  m_outputTree->Branch("res_eQOP_fit",  &m_res_eQOP_fit);
-  m_outputTree->Branch("res_eT_fit",    &m_res_eT_fit);
+  m_outputTree->Branch("res_ePT_fit",    &m_res_ePT_fit);
+  m_outputTree->Branch("res_ePTrel_fit", &m_res_ePTrel_fit);
   m_outputTree->Branch("pull_eLOC0_fit", &m_pull_eLOC0_fit);
   m_outputTree->Branch("pull_eLOC1_fit", &m_pull_eLOC1_fit);
   m_outputTree->Branch("pull_ePHI_fit", &m_pull_ePHI_fit);
