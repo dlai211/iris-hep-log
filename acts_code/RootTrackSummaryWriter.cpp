@@ -133,6 +133,8 @@ RootTrackSummaryWriter::RootTrackSummaryWriter(
   m_outputTree->Branch("res_eTHETA_fit", &m_res_eTHETA_fit);
   m_outputTree->Branch("res_eQOP_fit", &m_res_eQOP_fit);
   m_outputTree->Branch("res_eT_fit", &m_res_eT_fit);
+  m_outputTree->Branch("res_eQOP_fit",  &m_res_eQOP_fit);
+  m_outputTree->Branch("res_eT_fit",    &m_res_eT_fit);
   m_outputTree->Branch("pull_eLOC0_fit", &m_pull_eLOC0_fit);
   m_outputTree->Branch("pull_eLOC1_fit", &m_pull_eLOC1_fit);
   m_outputTree->Branch("pull_ePHI_fit", &m_pull_ePHI_fit);
@@ -435,6 +437,19 @@ ProcessCode RootTrackSummaryWriter::writeT(const AlgorithmContext& ctx,
         pull[i] = res[i] / error[i];
       }
     }
+    float res_pt    = NaNfloat;
+    float res_ptrel = NaNfloat;
+
+    if (hasFittedParams) {
+      const float qop = param[Acts::eBoundQOverP];
+      const float th  = param[Acts::eBoundTheta];
+      if (std::isfinite(qop) && qop != 0.0f && std::isfinite(th) && std::isfinite(t_pT)) {
+        const float p_rec  = std::abs(1.0f / qop);
+        const float pt_rec = p_rec * std::sin(th);
+        res_pt    = pt_rec - t_pT;
+        res_ptrel = (t_pT != 0.0f) ? (res_pt / t_pT) : NaNfloat;
+      }
+    }
 
     // Push the fitted track parameters.
     // Always push back even if no fitted track parameters
@@ -451,6 +466,8 @@ ProcessCode RootTrackSummaryWriter::writeT(const AlgorithmContext& ctx,
     m_res_eTHETA_fit.push_back(res[Acts::eBoundTheta]);
     m_res_eQOP_fit.push_back(res[Acts::eBoundQOverP]);
     m_res_eT_fit.push_back(res[Acts::eBoundTime]);
+    m_res_ePT_fit.push_back(res_pt);
+    m_res_ePTrel_fit.push_back(res_ptrel);
 
     m_err_eLOC0_fit.push_back(error[Acts::eBoundLoc0]);
     m_err_eLOC1_fit.push_back(error[Acts::eBoundLoc1]);
@@ -600,6 +617,8 @@ ProcessCode RootTrackSummaryWriter::writeT(const AlgorithmContext& ctx,
   m_res_eTHETA_fit.clear();
   m_res_eQOP_fit.clear();
   m_res_eT_fit.clear();
+  m_res_ePT_fit.clear();
+  m_res_ePTrel_fit.clear();
   m_pull_eLOC0_fit.clear();
   m_pull_eLOC1_fit.clear();
   m_pull_ePHI_fit.clear();
