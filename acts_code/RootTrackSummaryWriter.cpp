@@ -439,18 +439,18 @@ ProcessCode RootTrackSummaryWriter::writeT(const AlgorithmContext& ctx,
     }
     float res_pt    = NaNfloat;
     float res_ptrel = NaNfloat;
+    float pt_fit    = NaNfloat;
 
     if (hasFittedParams) {
-      const float qop = param[Acts::eBoundQOverP];
-      const float th  = param[Acts::eBoundTheta];
-      if (std::isfinite(qop) && qop != 0.0f && std::isfinite(th) && std::isfinite(t_pT)) {
-        const float p_rec  = std::abs(1.0f / qop);
-        const float pt_rec = p_rec * std::sin(th);
-        res_pt    = pt_rec - t_pT;
-        res_ptrel = (t_pT != 0.0f) ? (res_pt / t_pT) : NaNfloat;
+      const double pt_val = track.transverseMomentum();
+      if (std::isfinite(pt_val)) {
+        pt_fit = static_cast<float>(std::abs(pt_val));
+        if (std::isfinite(t_pT)) {
+          res_pt    = pt_fit - t_pT;
+          res_ptrel = (t_pT != 0.0f) ? (res_pt / t_pT) : NaNfloat;
+        }
       }
     }
-
     // Push the fitted track parameters.
     // Always push back even if no fitted track parameters
     m_eLOC0_fit.push_back(param[Acts::eBoundLoc0]);
