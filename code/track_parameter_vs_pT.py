@@ -189,6 +189,8 @@ def make_graph(xvals, yvals, yerrs=None, marker=20, color=ROOT.kBlack):
 def draw_one(param_idx, x, calc_y, acts_y, acts_yerr, ytitle, tag):
     c = ROOT.TCanvas(f"c_{tag}", "", 850, 620)
     c.SetRightMargin(0.12)
+    c.SetGridx(True) 
+    c.SetGridy(True) 
     c.SetTicks(1, 1)   # ticks on top and right
     c.SetLeftMargin(0.16)  # give the y-axis/title more room
 
